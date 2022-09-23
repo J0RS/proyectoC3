@@ -1,5 +1,6 @@
 using System;
 namespace ProyectoCiclo3.App.Dominio{
+    
     public class Usuario{
         public int id { get; set; }
         public string nombre { get; set; }
@@ -8,5 +9,5 @@ namespace ProyectoCiclo3.App.Dominio{
         public string telefono { get; set; }
         public string ciudad { get; set; }
     }
- 
+
 }
