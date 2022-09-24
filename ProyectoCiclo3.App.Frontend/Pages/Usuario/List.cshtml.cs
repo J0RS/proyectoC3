@@ -19,6 +19,8 @@ namespace ProyectoCiclo3.App.Frontend.Pages
         
         [BindProperty]
         public Usuario Usuario {get;set;}
+        [TempData]
+        public bool Error {get;set;}
         
         public ListUsuarioModel(RepositorioUsuarios repositorioUsuarios)
         {
@@ -33,7 +35,7 @@ namespace ProyectoCiclo3.App.Frontend.Pages
         {
             if(Usuario.id>0)
             {
-                repositorioUsuarios.Delete(Usuario.id);
+                Error = repositorioUsuarios.Delete(Usuario.id);
             }
             return RedirectToPage("./List");
         }
